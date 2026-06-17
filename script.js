@@ -2,10 +2,14 @@
 
 /* =========================
   公式LINE URL設定
-  公式LINEが公開されたら、下記の "line.html" を公式LINEのURLに変更してください。
+
+  現在は未設定のため空文字にしています。
+  この状態では「お問い合わせ」ボタンを押しても遷移しません。
+
+  公式LINEが公開されたら、下記を差し替えてください。
   例）const LINE_URL = "https://lin.ee/xxxxxxxx";
 ========================= */
-const LINE_URL = "line.html";
+const LINE_URL = "";
 
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".js-header");
@@ -15,7 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const yearElements = document.querySelectorAll(".js-year");
 
   lineLinks.forEach(function (link) {
-    link.setAttribute("href", LINE_URL);
+    if (LINE_URL) {
+      link.setAttribute("href", LINE_URL);
+    } else {
+      link.setAttribute("href", "#");
+      link.setAttribute("aria-disabled", "true");
+
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+    }
   });
 
   yearElements.forEach(function (element) {

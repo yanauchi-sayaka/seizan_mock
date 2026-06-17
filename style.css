@@ -148,18 +148,6 @@ section {
   box-shadow: 0 18px 42px rgba(185, 150, 91, 0.45);
 }
 
-.btn-secondary {
-  color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-}
-
-.btn-secondary:hover {
-  color: var(--color-dark);
-  background: var(--color-white);
-}
-
 /* =========================
   Header
 ========================= */
@@ -263,13 +251,8 @@ section {
 }
 
 .nav-contact {
-  padding: 10px 20px !important;
-  border: 1px solid rgba(185, 150, 91, 0.65);
-  background: rgba(185, 150, 91, 0.1);
-}
-
-.nav-contact::after {
-  display: none;
+  border: 0;
+  background: transparent;
 }
 
 .menu-toggle {
@@ -416,7 +399,6 @@ section {
 /* =========================
   Card
 ========================= */
-.info-card h3,
 .facility-card h3,
 .course-card h3 {
   margin: 0 0 14px;
@@ -424,7 +406,6 @@ section {
   color: var(--color-dark);
 }
 
-.info-card p,
 .facility-card p,
 .course-card p {
   margin: 0;
@@ -450,24 +431,15 @@ section {
 
 .facility-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
 .facility-card {
-  grid-column: span 2;
   overflow: hidden;
   border: 1px solid rgba(185, 150, 91, 0.24);
   border-radius: var(--radius-medium);
   background: rgba(255, 255, 255, 0.055);
-}
-
-.facility-card:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.facility-card:nth-child(5) {
-  grid-column: 4 / span 2;
 }
 
 .facility-image img {
@@ -813,12 +785,6 @@ section {
   .facility-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .facility-card,
-  .facility-card:nth-child(4),
-  .facility-card:nth-child(5) {
-    grid-column: auto;
-  }
 }
 
 /* =========================
@@ -871,7 +837,7 @@ section {
   .section-label {
     margin-bottom: 10px;
     font-size: 14px;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
   }
 
   .section-title {
@@ -972,7 +938,8 @@ section {
     width: 100%;
   }
 
-  .global-nav a {
+  .global-nav a,
+  .global-nav .nav-contact {
     width: 100%;
     justify-content: center;
     min-height: 52px;
@@ -992,11 +959,6 @@ section {
     background: rgba(185, 150, 91, 0.16);
   }
 
-  .nav-contact {
-    margin-top: 6px;
-    background: rgba(185, 150, 91, 0.18);
-  }
-
   .hero {
     min-height: 100svh;
     padding: 104px 0 42px;
@@ -1006,26 +968,30 @@ section {
 
   .hero-overlay {
     background:
-      linear-gradient(180deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.78)),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
       radial-gradient(circle at 70% 20%, rgba(185, 150, 91, 0.2), transparent 44%);
   }
 
   .hero h1 {
+    width: 100%;
     max-width: 100%;
-    font-size: clamp(30px, 8.4vw, 40px);
-    line-height: 1.18;
-    letter-spacing: 0.01em;
+    font-size: clamp(26px, 7.2vw, 34px);
+    line-height: 1.24;
+    letter-spacing: 0;
     word-break: keep-all;
     overflow-wrap: normal;
   }
 
   .hero h1 span {
     display: block;
+    width: 100%;
     max-width: 100%;
   }
 
   .hero-title-last {
-    white-space: normal;
+    white-space: nowrap;
+    font-size: 0.94em;
+    letter-spacing: 0;
   }
 
   .hero-text {
@@ -1045,7 +1011,7 @@ section {
   }
 
   .btn {
-    min-height: 52px;
+    min-height: 50px;
     padding: 0 20px;
     font-size: 13px;
   }
@@ -1176,9 +1142,13 @@ section {
   }
 
   .hero h1 {
-    font-size: clamp(28px, 8.1vw, 34px);
-    line-height: 1.2;
+    font-size: clamp(25px, 7vw, 30px);
+    line-height: 1.25;
     letter-spacing: 0;
+  }
+
+  .hero-title-last {
+    font-size: 0.92em;
   }
 
   .hero-text {
@@ -1210,7 +1180,11 @@ section {
 ========================= */
 @media (max-width: 360px) {
   .hero h1 {
-    font-size: 27px;
+    font-size: 24px;
+  }
+
+  .hero-title-last {
+    font-size: 0.9em;
   }
 
   .logo-main {
@@ -1221,7 +1195,8 @@ section {
     display: none;
   }
 
-  .global-nav a {
+  .global-nav a,
+  .global-nav .nav-contact {
     font-size: 20px;
     min-height: 50px;
   }
