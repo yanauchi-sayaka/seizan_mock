@@ -48,10 +48,14 @@ body.is-menu-open {
   height: 100svh;
 }
 
-img {
+img,
+picture {
   max-width: 100%;
-  height: auto;
   display: block;
+}
+
+img {
+  height: auto;
 }
 
 a {
@@ -387,6 +391,7 @@ section {
   width: 100%;
   height: clamp(360px, 45vw, 560px);
   object-fit: cover;
+  object-position: center;
 }
 
 /* =========================
@@ -434,11 +439,43 @@ section {
   background: rgba(255, 255, 255, 0.055);
 }
 
+.facility-image,
+.facility-image picture {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
 .facility-image img {
   width: 100%;
   height: clamp(210px, 22vw, 240px);
   object-fit: cover;
+  object-position: center;
   transition: transform 0.35s ease;
+}
+
+.facility-image--terrace img {
+  object-position: center center;
+}
+
+.facility-image--bbq img {
+  object-position: center center;
+}
+
+.facility-image--indoor img {
+  object-position: center center;
+}
+
+.facility-image--karaoke img {
+  object-position: center center;
+}
+
+.facility-image--darts img {
+  object-position: center center;
+}
+
+.facility-image--mahjong img {
+  object-position: center center;
 }
 
 .facility-card:hover .facility-image img {
@@ -962,13 +999,14 @@ section {
     min-height: 84svh;
     padding: 82px 0 28px;
     align-items: center;
+    background-image: url("images/hero.jpg");
     background-position: 58% center;
   }
 
   .hero-overlay {
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-      radial-gradient(circle at 70% 20%, rgba(185, 150, 91, 0.2), transparent 44%);
+      radial-gradient(circle at 72% 22%, rgba(185, 150, 91, 0.2), transparent 44%);
   }
 
   .hero h1 {
@@ -1042,7 +1080,8 @@ section {
   }
 
   .about-image img {
-    height: 292px;
+    height: 340px;
+    object-position: center center;
   }
 
   .facility-section {
@@ -1061,11 +1100,35 @@ section {
   }
 
   .facility-image img {
-    height: 176px;
+    height: 340px;
+  }
+
+  .facility-image--terrace img {
+    object-position: 50% 54%;
+  }
+
+  .facility-image--bbq img {
+    object-position: 50% 48%;
+  }
+
+  .facility-image--indoor img {
+    object-position: 50% 52%;
+  }
+
+  .facility-image--karaoke img {
+    object-position: 50% 50%;
+  }
+
+  .facility-image--darts img {
+    object-position: 50% 48%;
+  }
+
+  .facility-image--mahjong img {
+    object-position: 50% 50%;
   }
 
   .facility-body {
-    padding: 15px 16px 17px;
+    padding: 14px 16px 16px;
   }
 
   .facility-card h3 {
@@ -1325,7 +1388,7 @@ section {
   }
 
   .about-image img {
-    height: 206px;
+    height: 300px;
   }
 
   .facility-section {
@@ -1333,11 +1396,11 @@ section {
   }
 
   .facility-image img {
-    height: 164px;
+    height: 320px;
   }
 
   .facility-body {
-    padding: 14px 15px 16px;
+    padding: 13px 15px 15px;
   }
 
   .course-card {
@@ -1383,5 +1446,13 @@ section {
   .global-nav .nav-contact {
     font-size: 19px;
     min-height: 46px;
+  }
+
+  .facility-image img {
+    height: 300px;
+  }
+
+  .about-image img {
+    height: 280px;
   }
 }
