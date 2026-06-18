@@ -43,10 +43,6 @@ body {
   overflow-x: hidden;
 }
 
-body.has-fixed-cta {
-  padding-bottom: 104px;
-}
-
 body.is-menu-open {
   overflow: hidden;
   height: 100svh;
@@ -150,26 +146,6 @@ section {
 
 .btn-primary:hover {
   box-shadow: 0 18px 42px rgba(185, 150, 91, 0.45);
-}
-
-/* =========================
-  固定問い合わせボタン
-========================= */
-.fixed-cta {
-  position: fixed;
-  left: 50%;
-  bottom: 22px;
-  z-index: 3000;
-  width: min(360px, calc(100% - 40px));
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
-.fixed-cta-button {
-  width: 100%;
-  min-height: 56px;
-  pointer-events: auto;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.26), 0 14px 34px rgba(185, 150, 91, 0.4);
 }
 
 /* =========================
@@ -423,7 +399,6 @@ section {
   color: var(--color-dark);
 }
 
-.facility-card p,
 .course-card p {
   margin: 0;
   color: var(--color-muted);
@@ -471,15 +446,14 @@ section {
 }
 
 .facility-body {
-  padding: 24px;
+  padding: 20px 24px 22px;
+  text-align: center;
 }
 
 .facility-card h3 {
+  margin: 0;
   color: var(--color-white);
-}
-
-.facility-card p {
-  color: rgba(255, 255, 255, 0.68);
+  letter-spacing: 0.06em;
 }
 
 /* =========================
@@ -561,9 +535,8 @@ section {
   padding: clamp(36px, 5vw, 64px);
   border: 1px solid rgba(185, 150, 91, 0.32);
   border-radius: var(--radius-large);
-  background:
-    radial-gradient(circle at top left, rgba(185, 150, 91, 0.18), transparent 40%),
-    rgba(255, 255, 255, 0.045);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .price-section .section-title {
@@ -691,6 +664,10 @@ section {
 
 .contact-box p:not(.section-label) {
   color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-box .btn {
+  margin-top: 30px;
 }
 
 /* =========================
@@ -834,10 +811,6 @@ section {
 @media (max-width: 768px) {
   :root {
     --header-height: 56px;
-  }
-
-  body.has-fixed-cta {
-    padding-bottom: calc(88px + env(safe-area-inset-bottom));
   }
 
   .container,
@@ -1033,15 +1006,6 @@ section {
     font-size: 13px;
   }
 
-  .fixed-cta {
-    bottom: calc(14px + env(safe-area-inset-bottom));
-    width: min(360px, calc(100% - 28px));
-  }
-
-  .fixed-cta-button {
-    min-height: 52px;
-  }
-
   .hero-points {
     flex-direction: column;
     gap: 6px;
@@ -1101,17 +1065,11 @@ section {
   }
 
   .facility-body {
-    padding: 16px 16px 18px;
+    padding: 15px 16px 17px;
   }
 
   .facility-card h3 {
-    margin-bottom: 7px;
     font-size: 17px;
-  }
-
-  .facility-card p {
-    font-size: 12.8px;
-    line-height: 1.58;
   }
 
   .course-section {
@@ -1256,6 +1214,11 @@ section {
     line-height: 1.72;
   }
 
+  .contact-box .btn {
+    width: 100%;
+    margin-top: 24px;
+  }
+
   .site-footer {
     padding: 34px 0;
   }
@@ -1280,10 +1243,6 @@ section {
 @media (max-width: 420px) {
   :root {
     --header-height: 54px;
-  }
-
-  body.has-fixed-cta {
-    padding-bottom: calc(84px + env(safe-area-inset-bottom));
   }
 
   .container,
@@ -1355,15 +1314,6 @@ section {
     font-size: 12.5px;
   }
 
-  .fixed-cta {
-    bottom: calc(12px + env(safe-area-inset-bottom));
-    width: min(340px, calc(100% - 24px));
-  }
-
-  .fixed-cta-button {
-    min-height: 50px;
-  }
-
   .about-section {
     padding-top: 44px;
     padding-bottom: 38px;
@@ -1387,7 +1337,7 @@ section {
   }
 
   .facility-body {
-    padding: 15px;
+    padding: 14px 15px 16px;
   }
 
   .course-card {
