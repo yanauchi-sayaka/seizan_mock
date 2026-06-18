@@ -621,7 +621,7 @@ section {
 .station-list li {
   position: relative;
   padding-left: 18px;
-  margin-top: 8px;
+  margin-top: 10px;
   color: var(--color-muted);
 }
 
@@ -635,6 +635,14 @@ section {
   background: var(--color-gold);
 }
 
+.station-name,
+.station-detail {
+  display: inline;
+}
+
+/* =========================
+  Map
+========================= */
 .map-area {
   overflow: hidden;
   border-radius: var(--radius-large);
@@ -816,7 +824,7 @@ section {
 ========================= */
 @media (max-width: 768px) {
   :root {
-    --header-height: 68px;
+    --header-height: 60px;
   }
 
   .container,
@@ -826,44 +834,49 @@ section {
   }
 
   .section {
-    padding: 68px 0;
+    padding: 58px 0;
   }
 
   .section-heading {
     text-align: left;
-    margin-bottom: 34px;
+    margin-bottom: 28px;
   }
 
   .section-label {
-    margin-bottom: 10px;
-    font-size: 14px;
-    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    font-size: 13px;
+    letter-spacing: 0.11em;
   }
 
   .section-title {
-    font-size: clamp(32px, 9vw, 38px);
-    line-height: 1.16;
+    font-size: clamp(30px, 8.4vw, 36px);
+    line-height: 1.15;
     letter-spacing: 0.02em;
   }
 
   .section-lead {
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 14px;
-    line-height: 1.9;
+    margin: 16px 0 0;
+    font-size: 13.5px;
+    line-height: 1.78;
   }
 
   .site-header {
     height: var(--header-height);
   }
 
+  .header-inner {
+    height: var(--header-height);
+  }
+
   .logo-main {
-    font-size: 22px;
+    font-size: 20px;
+    letter-spacing: 0.15em;
   }
 
   .logo-sub {
-    font-size: 8px;
-    letter-spacing: 0.15em;
+    margin-top: 4px;
+    font-size: 7.5px;
+    letter-spacing: 0.13em;
   }
 
   .menu-toggle {
@@ -872,9 +885,9 @@ section {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6px;
-    width: 44px;
-    height: 44px;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     border: 0;
     background: transparent;
@@ -884,7 +897,7 @@ section {
 
   .menu-toggle span {
     display: block;
-    width: 26px;
+    width: 24px;
     height: 1px;
     margin-left: auto;
     background: currentColor;
@@ -892,7 +905,7 @@ section {
   }
 
   .menu-toggle.is-active span:nth-child(1) {
-    transform: translateY(7px) rotate(35deg);
+    transform: translateY(6px) rotate(35deg);
   }
 
   .menu-toggle.is-active span:nth-child(2) {
@@ -900,7 +913,7 @@ section {
   }
 
   .menu-toggle.is-active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-35deg);
+    transform: translateY(-6px) rotate(-35deg);
   }
 
   .global-nav {
@@ -911,7 +924,7 @@ section {
     align-items: center;
     justify-content: center;
     min-height: 100svh;
-    padding: 92px 24px 56px;
+    padding: 82px 24px 48px;
     background: rgba(248, 243, 234, 0.98);
     color: var(--color-dark);
     opacity: 0;
@@ -928,10 +941,10 @@ section {
   }
 
   .global-nav ul {
-    width: min(320px, 100%);
+    width: min(310px, 100%);
     flex-direction: column;
-    gap: 12px;
-    margin-top: 24px;
+    gap: 10px;
+    margin-top: 10px;
   }
 
   .global-nav li {
@@ -942,11 +955,11 @@ section {
   .global-nav .nav-contact {
     width: 100%;
     justify-content: center;
-    min-height: 52px;
-    padding: 12px 18px;
+    min-height: 48px;
+    padding: 10px 18px;
     border: 1px solid rgba(185, 150, 91, 0.22);
     background: rgba(255, 255, 255, 0.38);
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.2;
   }
 
@@ -961,7 +974,7 @@ section {
 
   .hero {
     min-height: 100svh;
-    padding: 104px 0 42px;
+    padding: 92px 0 36px;
     align-items: center;
     background-position: 58% center;
   }
@@ -996,14 +1009,14 @@ section {
 
   .hero-text {
     max-width: 100%;
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 1.9;
+    margin-top: 18px;
+    font-size: 13.5px;
+    line-height: 1.82;
   }
 
   .hero-buttons {
     display: block;
-    margin-top: 28px;
+    margin-top: 24px;
   }
 
   .hero-buttons .btn {
@@ -1011,61 +1024,115 @@ section {
   }
 
   .btn {
-    min-height: 50px;
-    padding: 0 20px;
+    min-height: 48px;
+    padding: 0 18px;
     font-size: 13px;
   }
 
   .hero-points {
     flex-direction: column;
-    gap: 8px;
-    margin-top: 26px;
+    gap: 7px;
+    margin-top: 22px;
   }
 
   .hero-points li {
     width: 100%;
-    font-size: 13px;
-    line-height: 1.55;
+    font-size: 12.8px;
+    line-height: 1.5;
+  }
+
+  .about-section {
+    padding-bottom: 48px;
   }
 
   .about-grid {
-    gap: 34px;
+    gap: 28px;
+  }
+
+  .about-text .section-title {
+    margin-bottom: 18px;
   }
 
   .about-text p:not(.section-label) {
-    font-size: 14px;
-    line-height: 1.95;
+    margin: 0 0 14px;
+    font-size: 13.3px;
+    line-height: 1.78;
+  }
+
+  .about-text p:last-child {
+    margin-bottom: 0;
   }
 
   .about-image img {
     height: 340px;
   }
 
+  .facility-section {
+    padding-top: 54px;
+  }
+
+  .facility-section .section-title {
+    font-size: clamp(28px, 7.8vw, 34px);
+  }
+
   .facility-grid,
   .course-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
   .facility-image img {
-    height: 236px;
+    height: 196px;
   }
 
-  .facility-body,
-  .course-card {
-    padding: 24px;
+  .facility-body {
+    padding: 18px 18px 20px;
+  }
+
+  .facility-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .facility-card p {
+    font-size: 13.2px;
+    line-height: 1.68;
   }
 
   .course-card {
-    border-radius: 22px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .course-card h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
   }
 
   .course-label {
-    font-size: 16px !important;
+    margin-bottom: 6px !important;
+    font-size: 15px !important;
+    letter-spacing: 0.1em;
   }
 
   .course-price {
-    font-size: 17px !important;
+    margin-bottom: 10px !important;
+    font-size: 16px !important;
+  }
+
+  .course-card p {
+    font-size: 13.3px;
+    line-height: 1.68;
+  }
+
+  .course-card ul {
+    margin-top: 14px;
+  }
+
+  .course-card li {
+    margin-top: 6px;
+    font-size: 13.2px;
+    line-height: 1.5;
   }
 
   .price-box {
@@ -1073,10 +1140,19 @@ section {
     border-radius: 22px;
   }
 
+  .price-section .section-title {
+    font-size: clamp(29px, 8vw, 34px);
+  }
+
+  .price-text p:not(.section-label) {
+    font-size: 13.5px;
+    line-height: 1.78;
+  }
+
   .price-list dl div {
     grid-template-columns: 1fr;
-    gap: 6px;
-    padding: 18px 0;
+    gap: 5px;
+    padding: 17px 0;
   }
 
   .price-list dt,
@@ -1088,10 +1164,46 @@ section {
     width: 100%;
   }
 
+  .access-block {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .station-list li {
+    padding-left: 0;
+    margin-top: 14px;
+  }
+
+  .station-list li::before {
+    display: none;
+  }
+
+  .station-name {
+    display: block;
+    color: var(--color-dark);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .station-detail {
+    display: block;
+    margin-top: 2px;
+    color: var(--color-muted);
+    font-size: 12.8px;
+    line-height: 1.6;
+  }
+
   .map-area,
   .map-area iframe {
-    min-height: 340px;
-    height: 340px;
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .contact-section {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.66)),
+      url("images/hero.jpg") center / cover;
   }
 
   .contact-box {
@@ -1099,8 +1211,8 @@ section {
   }
 
   .contact-box p:not(.section-label) {
-    font-size: 14px;
-    line-height: 1.9;
+    font-size: 13.5px;
+    line-height: 1.78;
   }
 
   .contact-box .btn {
@@ -1113,7 +1225,7 @@ section {
   }
 
   .footer-logo {
-    font-size: 26px;
+    font-size: 25px;
   }
 
   .copyright {
@@ -1125,6 +1237,10 @@ section {
   小さめスマホ
 ========================= */
 @media (max-width: 420px) {
+  :root {
+    --header-height: 58px;
+  }
+
   .container,
   .hero-content,
   .header-inner {
@@ -1132,12 +1248,29 @@ section {
   }
 
   .section {
-    padding: 62px 0;
+    padding: 54px 0;
+  }
+
+  .logo-main {
+    font-size: 19px;
+  }
+
+  .logo-sub {
+    font-size: 7px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .menu-toggle span {
+    width: 23px;
   }
 
   .hero {
-    padding-top: 98px;
-    padding-bottom: 38px;
+    padding-top: 88px;
+    padding-bottom: 34px;
     background-position: 60% center;
   }
 
@@ -1152,22 +1285,49 @@ section {
   }
 
   .hero-text {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 
   .section-title {
-    font-size: 32px;
+    font-size: 30px;
+  }
+
+  .facility-section .section-title,
+  .price-section .section-title {
+    font-size: 29px;
   }
 
   .btn {
-    min-height: 50px;
+    min-height: 48px;
     padding: 0 16px;
     font-size: 12.5px;
   }
 
-  .about-image img,
-  .facility-image img {
+  .about-text p:not(.section-label) {
+    font-size: 13px;
+    line-height: 1.74;
+  }
+
+  .about-image img {
     height: 220px;
+  }
+
+  .facility-image img {
+    height: 184px;
+  }
+
+  .facility-body {
+    padding: 17px;
+  }
+
+  .course-card {
+    padding: 18px;
+  }
+
+  .map-area,
+  .map-area iframe {
+    min-height: 300px;
+    height: 300px;
   }
 
   .line-card {
@@ -1188,7 +1348,7 @@ section {
   }
 
   .logo-main {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .logo-sub {
@@ -1198,6 +1358,6 @@ section {
   .global-nav a,
   .global-nav .nav-contact {
     font-size: 20px;
-    min-height: 50px;
+    min-height: 48px;
   }
 }
