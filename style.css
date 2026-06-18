@@ -1100,7 +1100,7 @@ section {
   }
 
   .facility-image img {
-    height: clamp(380px, 106vw, 420px);
+    height: clamp(340px, 96vw, 370px);
   }
 
   .facility-image--terrace img {
@@ -1403,7 +1403,7 @@ section {
   }
 
   .facility-image img {
-    height: 400px;
+    height: 360px;
   }
 
   .facility-body {
@@ -1462,7 +1462,7 @@ section {
   }
 
   .facility-image img {
-    height: 380px;
+    height: 340px;
   }
 
   .about-image img {
