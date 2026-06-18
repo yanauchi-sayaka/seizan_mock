@@ -1100,11 +1100,11 @@ section {
   }
 
   .facility-image img {
-    height: clamp(480px, 138vw, 540px);
+    height: clamp(380px, 106vw, 420px);
   }
 
   .facility-image--terrace img {
-    object-position: 50% 56%;
+    object-position: 50% 55%;
   }
 
   .facility-image--bbq img {
@@ -1136,7 +1136,7 @@ section {
   }
 
   .course-section {
-    padding-top: 52px;
+    padding-top: 44px;
     padding-bottom: 52px;
   }
 
@@ -1184,7 +1184,7 @@ section {
   }
 
   .price-section {
-    padding-top: 52px;
+    padding-top: 44px;
     padding-bottom: 52px;
   }
 
@@ -1214,7 +1214,7 @@ section {
   }
 
   .access-section {
-    padding-top: 52px;
+    padding-top: 44px;
     padding-bottom: 52px;
   }
 
@@ -1403,11 +1403,17 @@ section {
   }
 
   .facility-image img {
-    height: 500px;
+    height: 400px;
   }
 
   .facility-body {
     padding: 13px 15px 15px;
+  }
+
+  .course-section,
+  .price-section,
+  .access-section {
+    padding-top: 42px;
   }
 
   .course-card {
@@ -1456,7 +1462,7 @@ section {
   }
 
   .facility-image img {
-    height: 480px;
+    height: 380px;
   }
 
   .about-image img {
