@@ -1100,15 +1100,15 @@ section {
   }
 
   .facility-image img {
-    height: 340px;
+    height: clamp(480px, 138vw, 540px);
   }
 
   .facility-image--terrace img {
-    object-position: 50% 54%;
+    object-position: 50% 56%;
   }
 
   .facility-image--bbq img {
-    object-position: 50% 48%;
+    object-position: 50% 50%;
   }
 
   .facility-image--indoor img {
@@ -1120,7 +1120,7 @@ section {
   }
 
   .facility-image--darts img {
-    object-position: 50% 48%;
+    object-position: 50% 50%;
   }
 
   .facility-image--mahjong img {
@@ -1141,39 +1141,46 @@ section {
   }
 
   .course-card {
-    padding: 18px;
+    padding: 16px 17px 17px;
     border-radius: 19px;
   }
 
   .course-card h3 {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     font-size: 18px;
   }
 
   .course-label {
-    margin-bottom: 5px !important;
-    font-size: 14.5px !important;
+    margin-bottom: 3px !important;
+    font-size: 14px !important;
     letter-spacing: 0.09em;
   }
 
   .course-price {
-    margin-bottom: 9px !important;
-    font-size: 15.8px !important;
+    margin-bottom: 7px !important;
+    color: var(--color-dark) !important;
+    font-family: var(--font-serif);
+    font-size: 22px !important;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
   }
 
   .course-card p {
-    font-size: 13px;
-    line-height: 1.58;
+    font-size: 12.8px;
+    line-height: 1.52;
   }
 
   .course-card ul {
-    margin-top: 11px;
+    margin-top: 9px;
+    padding-top: 9px;
+    border-top: 1px solid rgba(185, 150, 91, 0.18);
   }
 
   .course-card li {
-    margin-top: 4px;
-    font-size: 13px;
-    line-height: 1.45;
+    margin-top: 3px;
+    font-size: 12.8px;
+    line-height: 1.4;
   }
 
   .price-section {
@@ -1256,8 +1263,8 @@ section {
 
   .map-area,
   .map-area iframe {
-    min-height: 292px;
-    height: 292px;
+    min-height: 250px;
+    height: 250px;
   }
 
   .contact-section {
@@ -1396,7 +1403,7 @@ section {
   }
 
   .facility-image img {
-    height: 320px;
+    height: 500px;
   }
 
   .facility-body {
@@ -1413,8 +1420,8 @@ section {
 
   .map-area,
   .map-area iframe {
-    min-height: 280px;
-    height: 280px;
+    min-height: 250px;
+    height: 250px;
   }
 
   .line-card {
@@ -1449,7 +1456,7 @@ section {
   }
 
   .facility-image img {
-    height: 300px;
+    height: 480px;
   }
 
   .about-image img {
