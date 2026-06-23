@@ -598,7 +598,16 @@ section {
   Flow
 ========================= */
 .flow-section {
-  background: #fffaf2;
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.flow-section .section-title {
+  color: var(--color-white);
+}
+
+.flow-section .section-lead {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .flow-grid {
@@ -610,10 +619,10 @@ section {
 .flow-card {
   min-height: 100%;
   padding: 28px 24px;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(185, 150, 91, 0.24);
   border-radius: var(--radius-medium);
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.045);
+  background: rgba(255, 250, 242, 0.94);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
 }
 
 .flow-number {
@@ -689,11 +698,6 @@ section {
 .station-name,
 .station-detail {
   display: inline;
-}
-
-.station-primary .station-name {
-  color: var(--color-dark);
-  font-weight: 700;
 }
 
 /* =========================
