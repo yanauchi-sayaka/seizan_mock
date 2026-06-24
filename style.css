@@ -559,11 +559,13 @@ section {
 .price-notes li::before {
   content: "";
   position: absolute;
-  top: 0.82em;
+  top: 0.72em;
   left: 0;
-  width: 6px;
-  height: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
   background: var(--color-gold);
+  opacity: 0.76;
 }
 
 /* =========================
@@ -1122,7 +1124,8 @@ section {
   }
 
   .price-box {
-    padding: 25px 20px;
+    gap: 24px;
+    padding: 22px 18px;
     border-radius: 21px;
   }
 
@@ -1131,14 +1134,15 @@ section {
   }
 
   .price-text p:not(.section-label) {
+    margin: 12px 0 0;
     font-size: 13.2px;
     line-height: 1.7;
   }
 
   .price-list dl div {
     grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 14px 0;
+    gap: 3px;
+    padding: 12px 0;
   }
 
   .price-list dt,
@@ -1147,7 +1151,7 @@ section {
   }
 
   .price-minimum-note {
-    margin-top: 15px;
+    margin-top: 14px;
     padding: 12px 14px;
     border-radius: 14px;
     font-size: 12.5px;
@@ -1155,7 +1159,7 @@ section {
   }
 
   .price-notes {
-    padding-top: 22px;
+    padding-top: 20px;
   }
 
   .price-notes h3 {
@@ -1165,6 +1169,10 @@ section {
   .price-notes li {
     font-size: 12.3px;
     line-height: 1.65;
+  }
+
+  .price-notes li::before {
+    top: 0.74em;
   }
 
   .flow-section {
@@ -1228,7 +1236,7 @@ section {
     display: block;
     color: var(--color-dark);
     font-size: 14.5px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.45;
   }
 
@@ -1398,7 +1406,7 @@ section {
   }
 
   .price-box {
-    padding: 23px 18px;
+    padding: 21px 17px;
   }
 
   .map-area,
