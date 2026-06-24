@@ -1081,7 +1081,7 @@ section {
   }
 
   .facility-image img {
-    height: clamp(340px, 96vw, 370px);
+    height: clamp(320px, 88vw, 350px);
   }
 
   .facility-image--terrace img {
@@ -1163,7 +1163,7 @@ section {
   }
 
   .price-notes li {
-    font-size: 11.8px;
+    font-size: 12.3px;
     line-height: 1.65;
   }
 
@@ -1384,7 +1384,7 @@ section {
   }
 
   .facility-image img {
-    height: 360px;
+    height: 330px;
   }
 
   .facility-body {
@@ -1435,7 +1435,7 @@ section {
   }
 
   .facility-image img {
-    height: 340px;
+    height: 320px;
   }
 
   .about-image img {
