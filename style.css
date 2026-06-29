@@ -167,7 +167,8 @@ section {
 }
 
 .site-header.is-scrolled,
-.site-header.is-menu-open {
+.site-header.is-menu-open,
+.sub-page .site-header {
   color: var(--color-dark);
   background: rgba(248, 243, 234, 0.94);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -249,7 +250,8 @@ section {
 }
 
 .site-header.is-scrolled .global-nav a:hover,
-.site-header.is-menu-open .global-nav a:hover {
+.site-header.is-menu-open .global-nav a:hover,
+.sub-page .site-header .global-nav a:hover {
   color: var(--color-gold);
 }
 
@@ -719,6 +721,58 @@ section {
 }
 
 /* =========================
+  Sub Page / Privacy
+========================= */
+.sub-page {
+  background:
+    linear-gradient(180deg, var(--color-cream), #fffaf2);
+}
+
+.sub-page-main {
+  padding-top: var(--header-height);
+}
+
+.privacy-page-section {
+  min-height: calc(100svh - var(--header-height));
+  background:
+    linear-gradient(180deg, var(--color-cream), #fffaf2);
+}
+
+.privacy-box {
+  padding: clamp(32px, 5vw, 56px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.06);
+}
+
+.privacy-box .section-title {
+  color: var(--color-dark);
+}
+
+.privacy-content {
+  margin-top: 28px;
+  color: var(--color-muted);
+}
+
+.privacy-content p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.85;
+}
+
+.privacy-content h2 {
+  margin: 28px 0 8px;
+  color: var(--color-gold);
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+.privacy-actions {
+  margin-top: 36px;
+}
+
+/* =========================
   Footer
 ========================= */
 .site-footer {
@@ -754,6 +808,25 @@ section {
 .site-footer p {
   margin: 0;
   font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 12.5px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-gold-light);
 }
 
 .copyright {
@@ -1276,6 +1349,38 @@ section {
     margin-top: 24px;
   }
 
+  .privacy-page-section {
+    padding-top: 46px;
+    padding-bottom: 48px;
+  }
+
+  .privacy-box {
+    padding: 24px 18px;
+    border-radius: 21px;
+  }
+
+  .privacy-content {
+    margin-top: 20px;
+  }
+
+  .privacy-content p {
+    font-size: 12.5px;
+    line-height: 1.72;
+  }
+
+  .privacy-content h2 {
+    margin: 22px 0 7px;
+    font-size: 13.2px;
+  }
+
+  .privacy-actions {
+    margin-top: 28px;
+  }
+
+  .privacy-actions .btn {
+    width: 100%;
+  }
+
   .site-footer {
     padding: 34px 0;
   }
@@ -1407,6 +1512,10 @@ section {
 
   .price-box {
     padding: 21px 17px;
+  }
+
+  .privacy-box {
+    padding: 22px 17px;
   }
 
   .map-area,
